@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="stylesheets/main.css" />
   </head>
   <body>
+    <div id="menu" class="hidden">
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <button id="close"></button>
+    </div>
+
     <header>
       <h1>
         <a href="#">Stamp</a>
@@ -20,7 +33,7 @@
         </ul>
       </nav>
 
-      <button id="menu" class="hidden"></button>
+      <button id="hamburger"></button>
     </header>
 
     <main>
@@ -64,6 +77,22 @@
         </ul>
       </nav>
     </footer>
-    <div class="dark-overlay"></div>    
+    <div class="dark-overlay"></div>
+
+    <script>
+      const $ = (selector) => document.querySelector(selector);
+      const hamburger = $("#hamburger");
+      const closeButton = $("#close");
+      const menu = $("#menu");
+
+      const show = (element) => element.classList.remove("hidden");
+      const hide = (element) => element.classList.add("hidden");
+
+      hamburger.onclick = (event) => show(menu);
+      menu.onclick = (event) => {
+        const tagName = event.target.tagName;
+        if (tagName === 'A' || tagName === 'BUTTON') hide(menu);
+      }
+    </script>
   </body>
 </html>

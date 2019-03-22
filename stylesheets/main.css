@@ -79,6 +79,10 @@ a:hover {
   color: #2c99ed;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*=============
     HEADER 
 =============*/
@@ -114,18 +118,52 @@ header nav a {
   font-size: 0.8em;
 }
 
-#menu {
+#hamburger {
   display: block;
   width: 30px;
   height: 30px;
+  background-image: url("../images/hamburger.png");
+  background-size: cover;
 }
 
-#menu:hover {
+#hamburger:hover {
   filter: brightness(80%);
 }
 
-#menu.hidden {
-  background-image: url("../images/hamburger.png");
+/*=============
+     MENU 
+=============*/
+#menu {
+  z-index: 2;
+  position: fixed;
+  width: 600px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #0c0c0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu li {
+  padding: 20px 0;
+}
+
+#menu nav a {
+  font-family: 'RobotoCondensed';
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+#close {
+  position: absolute;
+  top: 30px;
+  right: 55px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/x.png");
   background-size: cover;
 }
 
@@ -327,6 +365,10 @@ footer nav a {
 }
 
 @media screen and (max-width: 900px) {
+  #close {
+    right: 6%;
+  }
+
   header {
     padding: 0 6%;
   }
@@ -374,6 +416,14 @@ footer nav a {
 }
 
 @media screen and (max-width: 600px) {
+  #menu {
+    width: 100%;
+  }
+
+  #menu nav a {
+    font-size: 1.4em;
+  }
+
   article h1 {
     font-size: 1.8em;
   }
