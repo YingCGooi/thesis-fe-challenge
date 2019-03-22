@@ -260,6 +260,10 @@ form button[type=submit] {
   margin-bottom: 1em;
 }
 
+form button[type=submit]:hover {
+  filter: brightness(105%);
+}
+
 input::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
