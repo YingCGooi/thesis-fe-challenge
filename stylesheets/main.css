@@ -75,6 +75,10 @@ small {
   font-size: 0.55em;
 }
 
+a:hover {
+  color: #2c99ed;
+}
+
 /*=============
     HEADER 
 =============*/
@@ -114,6 +118,10 @@ header nav a {
   display: block;
   width: 30px;
   height: 30px;
+}
+
+#menu:hover {
+  filter: brightness(80%);
 }
 
 #menu.hidden {
@@ -189,6 +197,10 @@ label, form button {
   display: block;
 }
 
+label {
+  position: relative;
+}
+
 input {
   color: #FFFFFF;
   padding-left: 16px;
@@ -208,7 +220,12 @@ input, form button {
   width: 100%;
 }
 
-form button {
+input:focus {
+  outline: 1;
+  outline-color: #2c99ed;
+}
+
+form button[type=submit] {
   color: #FFFFFF;
   background: #2c99ed;
   border-bottom-left-radius: 5px;
@@ -217,7 +234,7 @@ form button {
 }
 
 input::placeholder {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 form small {
@@ -229,7 +246,28 @@ form small a {
   color: #FFFFFF;
 }
 
+#toggle-visible {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-size: cover;
+  filter: opacity(70%);
+}
 
+#toggle-visible:hover {
+  filter: opacity(100%);
+}
+
+.invisible {
+  background-image: url("../images/eye-disabled.png");
+}
+
+.visible {
+  background-image: url("../images/eye.png");
+}
 
 /*=============
     FOOTER 
@@ -261,4 +299,90 @@ footer nav a {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   font-size: 0.6em;
+}
+
+/*===============
+  Media Queries 
+===============*/
+@media screen and (max-width: 1300px) {
+  main > * {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  article h1 {
+    font-size: 2.2em;
+  }
+
+  article p {
+    font-size: 0.75em;
+  }
+
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 0 6%;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 160px;
+  }
+
+  main > * {
+    width: 100%;
+  }
+
+  article {
+    text-align: center;
+  }
+
+  article h1 {
+    font-size: 2.2em;
+  }
+
+  article p {
+    font-size: 0.75em;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column-reverse;
+    padding-bottom: 10px;
+  }
+
+  footer ul {
+    padding-bottom: 15px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  form {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  article h1 {
+    font-size: 1.8em;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+
+  footer li {
+    padding: 0;
+  }
 }
