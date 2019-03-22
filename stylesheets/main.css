@@ -1,0 +1,28 @@
+@import url("reset.css");
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  background-image: url("../images/splash.jpg");
+  src: url("Roboto-Bold"),
+       url("Roboto-Light"),
+       url("Roboto-Medium")
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+main {
+
+}
+
+#menu {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+#menu.hidden {
+  background-image: url("../images/hamburger.png");
+}

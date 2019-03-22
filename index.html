@@ -2,14 +2,61 @@
   <head>
     <title></title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">    
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-    <script src="./app.js"></script>
+    <link rel="stylesheet" href="stylesheets/main.css" />
   </head>
   <body>
-    <main></main>
+    <header>
+      <h1>
+        <a href="#">Stamp</a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu" class="hidden"></button>
+    </header>
+
+    <main>
+      <article>
+        <h1>Simple Way to Organize Your Inspirations</h1>
+        <p>
+          I think what motivates people is not great hate, but great love for other people.
+        </p>
+      </article>
+
+      <form action="#" method="post">
+        <h2>Sign up for free</h2>
+        <fieldset>
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="E-mail" />
+          <input type="password" name="password" placeholder="Password" />
+          <button class="invisible"></button>
+
+          <button type="submit">Sign up ></button>
+        </fieldset>
+        <small>
+          By clicking "Sign up" I agree to our 
+          <a href="#">Terms of Service</a>
+        </small>
+      </form>
+    </main>
+
+    <footer>
+      <small>©2016 Stamp. All Rights Reserved</small>
+      <nav>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Terms of use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
